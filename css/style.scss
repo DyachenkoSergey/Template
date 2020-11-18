@@ -1,0 +1,128 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+
+$color-white: #fff;
+$color-black: #000;
+
+
+
+
+
+header{
+  .header-top{
+    max-width: 1122px;
+    padding: 15px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    .header-logo{
+      max-width: 240px;
+      max-height: 100px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .header-address{
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      .phone,.address{
+        display: flex;
+        margin-left: 45px;
+      }
+      .fas{
+        font-size: 36px;
+        color: #137893 ;
+      }
+      h3{
+        font-size: 16px;
+        color: #137893;
+        margin-left: 10px;
+      }
+    }
+  }
+  nav{
+    width: 100%;
+    background: #1d5e91;
+    padding: 15px;
+    text-align: center;
+    ul{
+      li{
+        display: inline-block;
+        margin: 0 25px;
+        a{
+          color: $color-white;
+          font-size: 18px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+.new-year{
+  background-image: url("../images/bg-carousel.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 65px;
+  h1{
+    font-size: 73px;
+    color: $color-white;
+    margin-bottom: 65px;
+  }
+  h2{
+    font-size: 36px;
+    color: $color-white;
+    margin-bottom: 60px;
+  }
+  .new-year-date{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 85px;
+    h3{
+      font-size: 23px;
+      color: $color-white;
+      margin-left: 10px;
+      display: flex;
+      align-self: center;
+    }
+    .new-year-i{
+      display: flex;
+      margin-left: 50px;
+      .mountains{
+        max-width: 60px;
+        max-height: 36px;
+        display: flex;
+        align-self: center;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .far{
+        font-size: 24px;
+        color: $color-white;
+        display: flex;
+        align-self: center;
+      }
+    }
+  }
+  a{
+    padding: 25px 65px;
+    color: $color-white;
+    text-transform: uppercase;
+    background: #ce4da2;
+    border-radius: 5px;
+    font-size: 23px;
+    display: inline-block;
+  }
+}

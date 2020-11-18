@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none; }
+
+header .header-top {
+  max-width: 1122px;
+  padding: 15px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between; }
+  header .header-top .header-logo {
+    max-width: 240px;
+    max-height: 100px; }
+    header .header-top .header-logo img {
+      width: 100%;
+      height: 100%; }
+  header .header-top .header-address {
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between; }
+    header .header-top .header-address .phone, header .header-top .header-address .address {
+      display: flex;
+      margin-left: 45px; }
+    header .header-top .header-address .fas {
+      font-size: 36px;
+      color: #137893; }
+    header .header-top .header-address h3 {
+      font-size: 16px;
+      color: #137893;
+      margin-left: 10px; }
+header nav {
+  width: 100%;
+  background: #1d5e91;
+  padding: 15px;
+  text-align: center; }
+  header nav ul li {
+    display: inline-block;
+    margin: 0 25px; }
+    header nav ul li a {
+      color: #fff;
+      font-size: 18px;
+      text-transform: uppercase; }
+
+.new-year {
+  background-image: url("../images/bg-carousel.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 65px; }
+  .new-year h1 {
+    font-size: 73px;
+    color: #fff;
+    margin-bottom: 65px; }
+  .new-year h2 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 60px; }
+  .new-year .new-year-date {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 85px; }
+    .new-year .new-year-date h3 {
+      font-size: 23px;
+      color: #fff;
+      margin-left: 10px;
+      display: flex;
+      align-self: center; }
+    .new-year .new-year-date .new-year-i {
+      display: flex;
+      margin-left: 50px; }
+      .new-year .new-year-date .new-year-i .mountains {
+        max-width: 60px;
+        max-height: 36px;
+        display: flex;
+        align-self: center; }
+        .new-year .new-year-date .new-year-i .mountains img {
+          width: 100%;
+          height: 100%; }
+      .new-year .new-year-date .new-year-i .far {
+        font-size: 24px;
+        color: #fff;
+        display: flex;
+        align-self: center; }
+  .new-year a {
+    padding: 25px 65px;
+    color: #fff;
+    text-transform: uppercase;
+    background: #ce4da2;
+    border-radius: 5px;
+    font-size: 23px;
+    display: inline-block; }
+
+/*# sourceMappingURL=style.css.map */
