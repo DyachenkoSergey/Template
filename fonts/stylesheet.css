@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'M.Video';
+    src: url('MVideo-Bold.eot');
+    src: url('MVideo-Bold.eot?#iefix') format('embedded-opentype'),
+        url('MVideo-Bold.woff2') format('woff2'),
+        url('MVideo-Bold.woff') format('woff'),
+        url('MVideo-Bold.ttf') format('truetype'),
+        url('MVideo-Bold.svg#M.Video-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
