@@ -17,3 +17,37 @@ $(document).ready(function(){
         }
     });
 });
+
+let name = document.getElementById('name');
+let email = document.getElementById('email');
+let tel = document.getElementById('tel');
+let order = document.getElementById('order');
+
+let customer = {
+    name,
+    email,
+    tel
+};
+
+
+order.onclick = myClick;
+
+function myClick() {
+    customer.name = name.value;
+    customer.email = email.value;
+    customer.tel = tel.value;
+    localStorage.setItem('person', JSON.stringify(customer));
+    name.value = '';
+    email.value = '';
+    tel.value = '';
+}
+//=======================================================================================//
+$('.openModal').click(function (e) {
+    e.preventDefault();
+    $('.modal').addClass('active');
+});
+$('.closeModal').click(function (e) {
+    e.preventDefault();
+    $('.modal').removeClass('active');
+});
+

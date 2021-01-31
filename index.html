@@ -15,6 +15,23 @@
 
 </head>
 <body>
+<div class="modal" aria-hidden="true">
+    <div class="form-header">
+        <div class="form-body">
+            <h2>Оставить отзыв</h2>
+            <a href="#" class="window-close closeModal" aria-hidden="true">×</a>
+        </div>
+        <div class="inputForm">
+            <input type="text" name="user" placeholder="Имя" size="20" /><br>
+            <input type="text" name="user" placeholder="Город" size="20" /><br>
+            <textarea name="pass" placeholder="Отзыв"></textarea>
+            <input type="text" name="user" placeholder="Дата" size="20" />
+        </div>
+        <div class="buttonOK">
+            <a href="#" class="openForm window-close closeModal">Разместить</a>
+        </div>
+    </div>
+</div>
 <header>
     <div class="header-top">
         <div class="header-logo">
@@ -42,22 +59,22 @@
     <nav>
         <ul>
             <li>
-                <a href="#" target="_blank">Главная</a>
+                <a href="#">Главная</a>
             </li>
             <li>
-                <a href="#" target="_blank">О нас</a>
+                <a href="#о_нас">О нас</a>
             </li>
             <li>
-                <a href="#" target="_blank">Программа</a>
+                <a href="#программа">Программа</a>
             </li>
             <li>
-                <a href="#" target="_blank">Отзывы</a>
+                <a href="#отзывы">Отзывы</a>
             </li>
             <li>
-                <a href="#" target="_blank">Забронировать</a>
+                <a href="#заказ">Забронировать</a>
             </li>
             <li>
-                <a href="#" target="_blank">Контакты</a>
+                <a href="#контакты">Контакты</a>
             </li>
         </ul>
     </nav>
@@ -77,9 +94,10 @@
             <h3>Горнолыжный курорт s&#246lden</h3>
         </div>
     </div>
-    <a href="#" target="_blank">забронировать</a>
+    <a href="#заказ">забронировать</a>
 </section>
 <section class="maps-austria">
+    <div id="о_нас"></div>
     <div class="container-maps">
         <div class="maps-img">
             <img src="images/maps-austria.png" alt="map">
@@ -114,6 +132,7 @@
     </div>
 </section>
 <section class="what-is-included">
+
     <div class="container-what">
         <h2 class="main_h2">Что включено в тур</h2>
         <div class="what-block">
@@ -153,6 +172,7 @@
     </div>
 </section>
 <section class="program-tour">
+    <div id="программа"></div>
     <div class="container-program">
         <h2 class="main_h2">Программа тура</h2>
         <div class="circle">
@@ -246,7 +266,7 @@
                 <img src="images/6_day.png" alt="#">
             </div>
         </div>
-        <a href="#" target="_blank">Забронировать</a>
+        <a href="#заказ">Забронировать</a>
 
 
     </div>
@@ -285,6 +305,7 @@
     </div>
 </section>
 <section class="reviews">
+    <div id="отзывы"></div>
     <div class="container-reviews">
         <h2 class="main_h2">отзывы</h2>
         <div class="owl-carousel">
@@ -325,49 +346,12 @@
                     </div>
                 </div>
             </div>
-            <div class="main-carousel">
-                <div class="reviews-block">
-                    <div class="reviews-top">
-                        <div class="reviews-avatar">
-                            <img src="images/reviews-avatar-igor.png" alt="#">
-                        </div>
-                        <div class="reviews-name">
-                            <h5>Игорь Сверлов</h5>
-                            <h5>г. Киев</h5>
-                        </div>
-                    </div>
-                    <div class="reviews-text">
-                        <p>Для меня это первое катание на лыжах и первый горнолыжный курорт. Мне понравилось, нам повезло с погодой. Для начинающих довольно много мест для катания. Сам городок милый, оживленный, есть куда пойти, отель "на уровне", с бассейном, живописные окрестности.</p>
-                        <div class="date">
-                            <time>02.02.16</time>
-                        </div>
-                    </div>
-                </div>
-                <div class="reviews-block">
-                    <div class="reviews-top">
-                        <div class="reviews-avatar">
-                            <img src="images/reviews-avatar-marina.png" alt="#">
-                        </div>
-                        <div class="reviews-name">
-                            <h5>Марина Весельчакова</h5>
-                            <h5>г. Полтава</h5>
-                        </div>
-                    </div>
-                    <div class="reviews-text">
-                        <p>Красивый городок. Здесь мы ощутили в полной мере местный колорит- дома, отели в национальном стиле, рестораны. Множество магазинов с товарами местного производства. Цены везде приятно радуют. Приветливо
-                            улыбающиеся люди, причем искренне</p>
-                        <div class="date">
-                            <time>02.12.16</time>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-        <a href="#" target="_blank"><i class="fas fa-plus-circle"></i> добавить отзыв</a>
+        <a href="#" target="_blank" class="openForm window-big openModal"><i class="fas fa-plus-circle"></i> добавить отзыв</a>
     </div>
-
 </section>
 <section class="reservation">
+    <div id="заказ"></div>
     <div class="container-reservation">
         <div class="reservation-left-part">
             <div class="avatar-reservation">
@@ -385,23 +369,26 @@
                     <i class="far fa-calendar-alt"></i>
                     <h5>30.12 - 04.01</h5>
                 </div>
+
                 <div class="new-year-i">
                     <div class="mountains">
                         <img src="images/mountains.png" alt="mountains">
                     </div>
                     <h5>Горнолыжный курорт s&#246lden</h5>
+
                 </div>
             </div>
             <form method="get" action="#">
-                <input type="text" placeholder="фио">
-                <input type="email" placeholder="e-mail">
-                <input type="tel" placeholder="телефон">
-                <button type="submit">заказать</button>
+                <input type="text" placeholder="фио" id="name">
+                <input type="email" placeholder="e-mail" id="email">
+                <input type="tel" placeholder="телефон" id="tel">
+                <button type="submit" id="order">заказать</button>
             </form>
         </div>
     </div>
 </section>
 <section class="contacts">
+    <div id="контакты"></div>
     <div class="contacts-left-part">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1491.9853979555064!2d36.23554373423402!3d50.008452871949075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a0df3034d993%3A0xa605a2259fa7c72e!2z0YPQuy4g0KLRgNC40L3QutC70LXRgNCwLCDQpdCw0YDRjNC60L7Qsiwg0KXQsNGA0YzQutC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjEwMDA!5e0!3m2!1sru!2sua!4v1608502503142!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>

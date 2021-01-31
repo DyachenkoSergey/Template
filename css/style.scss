@@ -7,7 +7,7 @@
   list-style: none;
 }
 body{
-  font-family: MVideo, sans-serif;
+  font-family: MVideo, Opsans-serif ,sans-serif;
 }
 
 $bold: 700;
@@ -31,8 +31,17 @@ $color-black: #000;
   margin-bottom: 65px;
   padding-top: 60px;
   font-weight: $bold;
+  @include max-screen(768px){
+    font-size: 25px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+  }
+  @include max-screen(420px){
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+  }
 }
-
 
 
 
@@ -43,9 +52,23 @@ header{
     margin: auto;
     display: flex;
     justify-content: space-between;
+    @include max-screen(768px){
+      display: block;
+      max-width: 500px;
+      text-align: center;
+    }
     .header-logo{
       max-width: 240px;
       max-height: 100px;
+      @include max-screen(768px){
+        display: inline-block;
+        max-width: 200px;
+        max-height: 70px;
+      }
+      @include max-screen(420px){
+        max-width: 130px;
+        max-height: 50px;
+      }
       img{
         width: 100%;
         height: 100%;
@@ -55,6 +78,9 @@ header{
       padding-top: 22px;
       display: flex;
       justify-content: space-between;
+      @include max-screen(420px){
+        display: none;
+      }
       .phone,.address{
         display: flex;
         margin-left: 45px;
@@ -71,6 +97,7 @@ header{
       }
     }
   }
+
   nav{
     width: 100%;
     background: #1d5e91;
@@ -81,14 +108,23 @@ header{
         display: inline-block;
         margin: 0 25px;
         border: 1px solid transparent;
+        @include max-screen(768px){
+          margin: 0 10px;
+        }
+        @include max-screen(420px){
+          display: inline-block;
+        }
         &:hover{
-          border: 1px solid $color-white;
+          border-bottom: 1px solid $color-white;
         }
         a{
           color: $color-white;
           font-size: 18px;
           text-transform: uppercase;
           font-weight: $bold;
+          @include max-screen(920px){
+            font-size: 15px;
+          }
         }
       }
     }
@@ -102,21 +138,50 @@ header{
   text-align: center;
   text-transform: uppercase;
   padding: 65px;
+  @include max-screen(768px){
+    padding: 30px;
+  }
+  @include max-screen(420px){
+    padding: 15px;
+  }
   h1{
     font-size: 73px;
     color: $color-white;
     margin-bottom: 65px;
+    @include max-screen(768px){
+      font-size: 35px;
+      margin-bottom: 30px;
+    }
+    @include max-screen(420px){
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
   }
   h2{
     font-size: 36px;
     color: $color-white;
     margin-bottom: 60px;
+    @include max-screen(768px){
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    @include max-screen(420px){
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
   }
   .new-year-date{
     display: flex;
     justify-content: center;
     margin: auto;
     padding-bottom: 85px;
+    @include max-screen(768px){
+      padding-bottom: 30px;
+    }
+    @include max-screen(420px){
+      display: block;
+      text-align: center;
+    }
     h3{
       font-size: 23px;
       color: $color-white;
@@ -124,15 +189,30 @@ header{
       display: flex;
       align-self: center;
       font-weight: $regular;
+      @include max-screen(768px){
+        font-size: 12px;
+      }
     }
     .new-year-i{
       display: flex;
       margin-left: 50px;
+      @include max-screen(768px){
+        margin-left: 25px;
+      }
+      @include max-screen(420px){
+        margin-bottom: 15px;
+        margin-left: 0;
+        justify-content: center;
+      }
       .mountains{
         max-width: 60px;
         max-height: 36px;
         display: flex;
         align-self: center;
+        @include max-screen(768px){
+          max-height: 18px;
+          max-width: 30px;
+        }
         img{
           width: 100%;
           height: 100%;
@@ -143,6 +223,9 @@ header{
         color: $color-white;
         display: flex;
         align-self: center;
+        @include max-screen(768px){
+          font-size: 12px;
+        }
       }
     }
   }
@@ -155,6 +238,11 @@ header{
     font-size: 23px;
     display: inline-block;
     font-weight: $bold;
+    @include max-screen(768px){
+      padding: 12px 30px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
   }
 }
 .container-maps{
@@ -163,9 +251,22 @@ header{
   display: flex;
   justify-content: space-between;
   padding: 60px;
+  @include max-screen(768px){
+    max-width: 90%;
+    display: block;
+    text-align: center;
+  }
+  @include max-screen(420px){
+    padding: 15px;
+  }
   .maps-img{
     max-width: 600px;
     max-height: 350px;
+    display: inline-block;
+    @include max-screen(768px){
+      max-width: 300px;
+      max-height: 150px;
+    }
     img{
       width: 100%;
       height: 100%;
@@ -173,6 +274,16 @@ header{
   }
   .maps-achievements{
     ul{
+      @include max-screen(768px){
+        margin-top: 20px;
+        margin-left: 25%;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      @include max-screen(420px){
+        margin: 0;
+        text-align: center;
+      }
       li{
         list-style: none;
         color: $color-black;
@@ -180,6 +291,14 @@ header{
         text-transform: uppercase;
         margin-bottom: 30px;
         font-weight: $bold;
+        @include max-screen(768px){
+          font-size: 12px;
+          margin-bottom: 15px;
+        }
+        @include max-screen(420px){
+          text-align: left;
+          font-size: 10px;
+        }
         &:before{
           content: "";
           display: inline-block;
@@ -188,6 +307,14 @@ header{
           margin-right: 22px;
           width: 120px;
           text-align: right;
+          @include max-screen(768px){
+            font-size: 15px;
+            margin-right: 12px;
+            width: 70px;
+          }
+          @include max-screen(420px){
+            font-size: 12px;
+          }
         }
       }
       li:first-of-type{
@@ -218,6 +345,17 @@ header{
     }
     .maps-progressbar{
       display: flex;
+      @include max-screen(768px){
+        justify-content: space-between;
+      }
+      @include max-screen(420px){
+        display: block;
+      }
+      .maps-progressbar-right{
+        @include max-screen(420px){
+          margin-top: 20px;
+        }
+      }
       .maps-progressbar-left,.maps-progressbar-right{
         display: flex;
         .progressbar-left,.progressbar-right{
@@ -239,6 +377,9 @@ header{
             line-height: 20px;
             display: inline-block;
             font-weight: $regular;
+            @include max-screen(768px){
+              font-size: 10px;
+            }
           }
         }
         .progressbar-p{
@@ -247,6 +388,9 @@ header{
         .progressbar-right{
           background-image: url("../images/progressbar-2.png");
           margin-left: 30px;
+          @include max-screen(420px){
+            margin-left: 0;
+          }
         }
       }
     }
@@ -259,12 +403,34 @@ header{
     margin: auto;
     text-align: center;
     padding: 65px;
+    @include max-screen(768px){
+      max-width: 90%;
+      padding: 30px;
+    }
+    @include max-screen(420px){
+      padding: 0;
+    }
     .what-block{
       display: flex;
       justify-content: space-between;
+      @include max-screen(768px){
+        flex-wrap: wrap;
+        align-content: stretch;
+        width: 100%;
+      }
+      @include max-screen(420px){
+        display: block;
+        text-align: center;
+      }
       .block{
-        width: calc(100% / 4);
+        width: 25%;
         margin: 15px;
+        @include max-screen(768px){
+          width: 40%;
+        }
+        @include max-screen(420px){
+          width: auto;
+        }
         .block-img{
           margin-bottom: 15px;
           width: 127px;
@@ -283,6 +449,9 @@ header{
             font-size: 23px;
             color: #137893;
             font-weight: $regular;
+            @include max-screen(768px){
+              font-size: 15px;
+            }
           }
         }
       }
@@ -298,6 +467,12 @@ header{
     padding: 15px;
     margin: auto;
     text-align: center;
+    @include max-screen(768px){
+      max-width: 420px;
+    }
+    @include max-screen(420px){
+      max-width: 320px;
+    }
     .circle{
       width: 85px;
       height: 85px;
@@ -311,27 +486,61 @@ header{
         font-size: 18px;
         color: #fff;
         font-weight: $bold;
+        @include max-screen(768px){
+          font-size: 13px;
+        }
       }
     }
     .first-day{
       display: flex;
       justify-content: space-between;
       margin-bottom: 40px;
+      @include max-screen(768px){
+        display: block;
+      }
+      @include max-screen(420px){
+        margin-bottom: 15px;
+      }
       .left-part{
         max-width: 450px;
         text-align: left;
         padding-right: 50px;
+        @include max-screen(920px){
+          width: 400px;
+        }
+        @include max-screen(768px){
+          text-align: center;
+          padding-right: 0;
+        }
+        @include max-screen(420px){
+          width: 290px;
+        }
         h4{
           font-size: 16px;
           color: $color-black;
           margin-bottom: 60px;
           font-weight: $bold;
+          @include max-screen(768px){
+            margin-bottom: 30px;
+          }
+          @include max-screen(420px){
+            font-size: 12px;
+            margin-bottom: 15px;
+          }
         }
         p{
           font-size: 16px;
           font-weight: $regular;
           color: $color-black;
           line-height: 25px;
+          @include max-screen(768px){
+            margin-bottom: 30px;
+          }
+          @include max-screen(420px){
+            font-size: 12px;
+            margin-bottom: 15px;
+            max-width: 290px;
+          }
         }
 
       }
@@ -340,11 +549,33 @@ header{
         height: 260px;
         background-color: #137893;
         display: block;
+        @include max-screen(768px){
+          display: none;
+        }
       }
       .right-part{
         width: 450px;
         height: 230px;
         border-radius: 4px;
+        @include max-screen(920px){
+          width: 400px;
+        }
+        @include max-screen(768px){
+          margin-bottom: 80px;
+          &:after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $color-black;
+            margin-top: 10px;
+          }
+        }
+        @include max-screen(420px){
+          margin-bottom: 50px;
+          width: 290px;
+          height: 150px;
+        }
         img{
           width: 100%;
           height: 100%;
@@ -361,6 +592,11 @@ header{
       border-radius: 5px;
       display: inline-block;
       font-weight: $bold;
+      @include max-screen(768px){
+        font-size: 15px;
+        padding: 15px 30px;
+        margin: 25px 0;
+      }
     }
   }
 }
@@ -373,18 +609,36 @@ header{
     padding: 15px 15px 65px;
     margin: auto;
     text-align: center;
+    @include max-screen(768px){
+      max-width: 400px;
+      padding: 15px 15px 30px;
+    }
     .main_go{
       display: flex;
       justify-content: space-between;
+      @include max-screen(768px){
+        display: block;
+      }
       .part_go{
         max-width: 450px;
         display: flex;
         justify-content: space-between;
+        @include max-screen(768px){
+          display: block;
+          margin-bottom: 50px;
+          border: 1px solid #ccc;
+          padding: 20px 0;
+        }
         .avatar{
           width: 160px;
           height: 160px;
           border-radius: 50%;
           overflow: hidden;
+          @include max-screen(768px){
+            text-align: center;
+            display: inline-block;
+            margin-bottom: 20px;
+          }
           img{
             width: 100%;
             height: 100%;
@@ -393,12 +647,19 @@ header{
         .gid{
           text-align: left;
           margin-left: 30px;
+          @include max-screen(768px){
+            margin: 0;
+            text-align: center;
+          }
           h4{
             font-size: 20px;
             color: $color_black;
             text-transform: uppercase;
             margin-bottom: 40px;
             font-weight: $bold;
+            @include max-screen(768px){
+              margin-bottom: 20px;
+            }
           }
           h5{
             font-size: 18px;
@@ -431,7 +692,15 @@ header{
     padding: 15px;
     margin: auto;
     text-align: center;
+    @include max-screen(420px){
+      max-width: 100%;
+      padding: 15px;
+    }
     .owl-carousel{
+      margin-bottom: 60px;
+      @include max-screen(420px){
+        margin-bottom: 20px;
+      }
       .owl-nav{
         .owl-prev{
           &:after{
@@ -463,11 +732,25 @@ header{
       .main-carousel{
         display: flex;
         justify-content: space-between;
+        @include max-screen(768px){
+          display: block;
+          text-align: center;
+        }
         .reviews-block{
           max-width: 445px;
           border: 10px solid #f1efe6;
           padding: 17px 40px 30px 22px;
           text-align: left;
+          @include max-screen(920px){
+            max-width: 420px;
+            display: inline-block;
+            margin-bottom: 30px;
+            border: 5px solid #f1efe6;
+          }
+          @include max-screen(420px){
+            max-width: 290px;
+            padding: 15px;
+          }
           .reviews-top{
             display: flex;
             .reviews-avatar{
@@ -476,6 +759,11 @@ header{
               border-radius: 50%;
               overflow: hidden;
               margin: 0 33px 33px 0;
+              @include max-screen(420px){
+                width: 100px;
+                height: 100px;
+                margin: 0;
+              }
               img{
                 width: 100%;
                 height: 100%;
@@ -483,11 +771,17 @@ header{
             }
             .reviews-name{
               padding-top: 28px;
+              @include max-screen(420px){
+                padding-left: 15px;
+              }
               h5{
                 font-size: 18px;
                 color: $color-black;
                 margin-bottom: 20px;
                 font-weight: $bold;
+                @include max-screen(420px){
+                  font-size: 15px;
+                }
               }
             }
           }
@@ -497,6 +791,9 @@ header{
               color: $color-black;
               margin-bottom: 20px;
               font-weight: $regular;
+              @include max-screen(420px){
+                font-size: 15px;
+              }
             }
             .date{
               text-align: right;
@@ -505,6 +802,9 @@ header{
                 font-size: 18px;
                 color: #515151;
                 display: block;
+                @include max-screen(420px){
+                  font-size: 15px;
+                }
               }
             }
           }
@@ -524,6 +824,12 @@ header{
       .fas{
         margin-right: 10px;
       }
+      @include max-screen(420px){
+        font-size: 15px;
+        padding: 15px 30px;
+        border: 2px solid #ff26b5;
+        margin-bottom: 30px;
+      }
     }
   }
 }
@@ -533,6 +839,9 @@ header{
     color: $color_white;
     font-size: 33px;
     font-weight: $regular;
+    @include max-screen(768px){
+      font-size: 20px;
+    }
   }
   span{
     font-weight: $bold;
@@ -542,10 +851,27 @@ header{
     margin: auto;
     display: flex;
     justify-content: space-between;
+    @include max-screen(920px){
+      max-width: 900px;
+    }
+    @include max-screen(768px){
+      max-width: 400px;
+      display: block;
+    }
+    @include max-screen(420px){
+      max-width: 290px;
+    }
     .reservation-left-part{
       padding-top: 94px;
       text-align: center;
       max-width: 400px;
+      @include max-screen(768px){
+        padding-top: 40px;
+      }
+      @include max-screen(420px){
+        padding-top: 15px;
+        max-width: 290px;
+      }
       .avatar-reservation{
         width: 255px;
         height: 255px;
@@ -553,6 +879,16 @@ header{
         overflow: hidden;
         margin-bottom: 70px;
         display: inline-block;
+        @include max-screen(768px){
+          width: 150px;
+          height: 150px;
+          margin-bottom: 30px;
+        }
+        @include max-screen(420px){
+          width: 100px;
+          height: 100px;
+          margin-bottom: 15px;
+        }
         img{
           width: 100%;
           height: 100%;
@@ -563,25 +899,51 @@ header{
       padding-bottom: 65px;
       text-align: center;
       max-width: 450px;
+      @include max-screen(768px){
+        padding-bottom: 30px;
+        max-width: 400px;
+      }
+      @include max-screen(420px){
+        max-width: 290px;
+        padding-bottom: 15px;
+      }
       h3{
         margin-top: 65px;
         text-transform: uppercase;
         margin-bottom: 26px;
         font-weight: $bold;
+        @include max-screen(768px){
+          margin-top: 30px;
+        }
+        @include max-screen(420px){
+          margin-top: 30px;
+          margin-bottom: 10px;
+        }
       }
       h4{
         font-size: 25px;
         color: $color-white;
         margin-bottom: 23px;
         font-weight: $bold;
+        @include max-screen(768px){
+          font-size: 15px;
+        }
       }
       .new-year-date{
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
+        @include max-screen(420px){
+          display: block;
+          margin-bottom: 15px;
+        }
         .new-year-i{
           display: flex;
           justify-content: space-between;
+          @include max-screen(420px){
+            justify-content: center;
+            margin-bottom: 10px;
+          }
           .far{
             color: $color-white;
             font-size: 15px;
@@ -616,6 +978,11 @@ header{
           margin-bottom: 36px;
           border: none;
           border-radius: 5px;
+          @include max-screen(768px){
+            font-size: 15px;
+            padding: 15px 15px 15px 10px;
+            margin-bottom: 20px;
+          }
         }
         button{
           width: 100%;
@@ -628,6 +995,11 @@ header{
           text-align: center;
           border: none;
           font-weight: $bold;
+          cursor: pointer;
+          @include max-screen(768px){
+            font-size: 20px;
+            padding: 15px;
+          }
         }
       }
     }
@@ -636,14 +1008,35 @@ header{
 .contacts{
   background: #f1efe6;
   display: flex;
+  @include max-screen(768px){
+    display: block;
+    padding: 0 15px;
+  }
   .contacts-left-part{
     width: 760px;
     height: 490px;
+    @include max-screen(1024px){
+      width: 500px;
+    }
+    @include max-screen(768px){
+      width: 100%;
+      height: 300px;
+    }
   }
   .contacts-right-part{
     margin-left: 70px;
+    @include max-screen(768px){
+      margin: 0;
+      text-align: center;
+    }
     h2{
       margin-left: 70px;
+      @include max-screen(768px){
+        margin: 0 0 30px 0;
+      }
+      @include max-screen(420px){
+        margin: 0;
+      }
     }
     .contacts-circle{
       width: 100px;
@@ -654,13 +1047,27 @@ header{
       text-align: center;
       padding-top: 20px;
       margin: 0 45px 45px 0;
+      @include max-screen(768px){
+        width: 50px;
+        height: 50px;
+        padding-top: 10px;
+        display: inline-block;
+        margin: 0;
+      }
       .fas{
         color: #137893;
         font-size: 55px;
+        @include max-screen(768px){
+          font-size: 30px;
+        }
       }
     }
     .contacts-address,.contacts-tel{
       display: flex;
+      @include max-screen(768px){
+        display: inline-block;
+        margin: 15px 30px;
+      }
     }
     .contacts-address-tel{
       h3{
@@ -668,6 +1075,9 @@ header{
         color: #137893;
         margin-top: 13px;
         font-weight: $regular;
+        @include max-screen(420px){
+          font-size: 15px;
+        }
       }
     }
   }
@@ -676,6 +1086,9 @@ footer {
   background: #f1efe6;
   border-top: 2px solid #70a9b9;
   padding: 25px 0;
+  @include max-screen(768px){
+    padding: 0;
+  }
 
   .container-footer {
     max-width: 1145px;
@@ -683,11 +1096,25 @@ footer {
     padding: 15px;
     display: flex;
     justify-content: space-between;
-
+    @include max-screen(768px){
+      max-width: 600px;
+    }
+    @include max-screen(420px){
+      max-width: 290px;
+      display: block;
+      text-align: center;
+    }
     .footer-logo {
       width: 240px;
       height: 100px;
-
+      @include max-screen(768px){
+        width: 120px;
+        height: 60px;
+      }
+      @include max-screen(420px){
+        display: inline-block;
+        margin-bottom: 15px;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -696,12 +1123,18 @@ footer {
 
     .we-in {
       text-align: center;
-
+      @include max-screen(420px){
+        margin-bottom: 15px;
+      }
       h3 {
         font-size: 24px;
         color: #137893;
         margin-bottom: 20px;
         font-weight: $regular;
+        @include max-screen(768px){
+          font-size: 12px;
+          margin-bottom: 10px;
+        }
       }
 
       .social-networks {
@@ -715,7 +1148,18 @@ footer {
           border-radius: 5px;
           text-align: center;
           padding-top: 6px;
-
+          @include max-screen(920px){
+            width: 35px;
+            height: 35px;
+            font-size: 25px;
+            margin: 0 15px;
+          }
+          @include max-screen(768px){
+            width: 25px;
+            height: 25px;
+            font-size: 15px;
+            margin: 0 10px;
+          }
           &:hover {
             background: #013664;
           }
@@ -726,12 +1170,115 @@ footer {
     .development {
       text-align: center;
       margin-top: 35px;
-
+      @include max-screen(768px){
+        margin-top: 0;
+      }
       h4 {
         font-size: 14px;
         color: #137893;
         font-weight: $regular;
+        @include max-screen(768px){
+          font-size: 10px;
+        }
       }
     }
   }
 }
+//====================================================================//
+.modal{
+  &:before{
+    content: "";
+    display: none;
+    background: rgba(0, 48, 230, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+  .form-header{
+    background: #fefefe;
+    border: #232222 solid 0;
+    border-radius: 5px;
+    margin-left: -200px;
+    text-align:center;
+    position: fixed;
+    left: 50%;
+    top: -100%;
+    z-index: 11;
+    width: 450px;
+    transform: translate(0, -500%);
+    transition: transform 0.3s ease-out;
+    @include max-screen(420px){
+      width: 290px;
+      margin-left: -145px;
+    }
+    .form-body{
+      border-bottom: #eeeeee solid 1px;
+      padding: 10px 20px;
+      h2{
+        font-size: 20px;
+      }
+    }
+    .inputForm{
+      padding: 20px;
+      input,textarea {
+        width: 300px;
+        padding: 8px;
+        border: 1px solid #ddd;
+        color: #888;
+        outline: 0;
+        font-size: 14px;
+        font-weight: $bold;
+        margin-top: 10px;
+        @include max-screen(420px){
+          width: 250px;
+        }
+      }
+      textarea{
+        height: 200px;
+        resize: none;
+      }
+    }
+    .buttonOK{
+      padding: 10px 20px;
+      .openForm{
+        font-size: 20px;
+        border-radius: 3px;
+        color: $color-black;
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        text-align: center;
+        min-width: 60px;
+        position: relative;
+      }
+    }
+  }
+}
+
+
+.openForm.window-big {
+  font-size: 18px;
+  padding: 15px 20px;
+  min-width: 100px;
+}
+.window-close {
+  color: #e60023;
+  font-size: 30px;
+  text-decoration: none;
+  padding:10px;
+  position: absolute;
+  right: 7px;
+  top: 0;
+}
+
+.active:before {
+  display: block;
+}
+.active .form-header {
+  transform: translate(0, 0);
+  top: 20%;
+}
+
