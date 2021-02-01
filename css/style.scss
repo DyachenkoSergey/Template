@@ -43,8 +43,6 @@ $color-black: #000;
   }
 }
 
-
-
 header{
   .header-top{
     max-width: 1122px;
@@ -109,7 +107,9 @@ header{
         margin: 0 25px;
         border: 1px solid transparent;
         @include max-screen(768px){
-          margin: 0 10px;
+          margin: 10px 5px;
+          border-right: 1px solid $color-white;
+          padding-right: 15px;
         }
         @include max-screen(420px){
           display: inline-block;

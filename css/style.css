@@ -82,7 +82,9 @@ header nav {
     border: 1px solid transparent; }
     @media screen and (max-width: 768px) {
       header nav ul li {
-        margin: 0 10px; } }
+        margin: 10px 5px;
+        border-right: 1px solid #fff;
+        padding-right: 15px; } }
     @media screen and (max-width: 420px) {
       header nav ul li {
         display: inline-block; } }
